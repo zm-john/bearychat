@@ -1,0 +1,29 @@
+{
+    "name": "quhang/bearychat",
+    "description": "bearychat robot message api",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Qu hang",
+            "email": "quhang36@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Quhang\\BearyChat\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Quhang\\BearyChat\\ServiceProvider"
+            ],
+            "aliases": {
+                "BearyChat": "Quhang\\Facade\\BearyChat"
+            }
+        }
+    }
+}
