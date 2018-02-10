@@ -14,7 +14,7 @@ class LaravelServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../bearychat.php' => config_path('bearychat.php'),
+            __DIR__.'/../config/bearychat.php' => config_path('bearychat.php'),
         ]);
     }
 
