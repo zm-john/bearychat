@@ -19,10 +19,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Quhang\\BearyChat\\ServiceProvider"
+                "Quhang\\BearyChat\\LaravelServiceProvider"
             ],
             "aliases": {
-                "BearyChat": "Quhang\\Facade\\BearyChat"
+                "BearyChat": "Quhang\\BearyChat\\BearyChat"
             }
         }
     }
