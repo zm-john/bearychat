@@ -2,6 +2,7 @@
     "name": "quhang/bearychat",
     "description": "bearychat robot message api",
     "license": "MIT",
+    "keywords": ["laravel", "bearychat"],
     "authors": [
         {
             "name": "Qu hang",

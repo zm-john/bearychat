@@ -55,6 +55,12 @@ class Message
         return $this->attachment($attachment);
     }
 
+    public function webhook($webhook)
+    {
+        $this->webhook = $webhook;
+        return $this;
+    }
+
     public function send()
     {
         $this->webhookCheck();

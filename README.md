@@ -29,6 +29,36 @@ $attachment = new \Quhang\BearyChat\Attachment([
 $message->send();
 ```
 
+## Laravel
+
+### laravel 5.5+
+1. you can publish config, then set your webhook in .env `BEARYCHAT_WEBHOOK`. This is unnecessary.
+```
+php artisan vendor:publish
+```
+2. 使用 `BearyChat` to send message. `BearyChat` is a `\Quhang\BearyChat\Message` instance.
+```
+\Quhang\BearyChat\BearyChat::text('hello')->send()
+```
+
+### laravel 5.1 ~ 5.4
+1. if you want to config your webhook, you need add `Quhang\BearyChat\LaravelServiceProvider` to `config/app.php`
+```
+'providers' => [
+    // ...
+    Quhang\BearyChat\LaravelServiceProvider::class,
+    // ...
+]
+```
+2. if you want to use Facade, you need add `Quhang\BearyChat\BearyChat` to `config/app.php`
+```
+'aliases' => [
+    // ...
+    'BearyChat' => Quhang\BearyChat\BearyChat::class,
+    // ...
+]
+```
+
 ## Methods
 ```
 function text(string $text); # set text
@@ -38,6 +68,7 @@ function channel(string $name); # set channel name
 function to(string $username); # send to someone
 function attachment(Attachment $attach); # append a attachment
 function appendAttachment(Attachment $attach); # alias attachment
+function webhook($webhook); # set webhook url
 function send(bool $need = true); # send
 ```
 
