@@ -31,7 +31,7 @@ class LaravelServiceProvider extends ServiceProvider
     protected function registerBearyChat()
     {
         $this->app->singleton('bearychat', function () {
-            return new Message(config('bearychat.webhook'));
+            return new Message(config('bearychat.webhook'), config('bearychat.default_channel'));
         });
     }
 }

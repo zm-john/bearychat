@@ -9,9 +9,10 @@ class Message
     protected $webhook;
     protected $message = [];
 
-    public function __construct($webhook)
+    public function __construct($webhook, $channel = '')
     {
         $this->webhook = $webhook;
+        $this->channel($channel);
     }
 
     public function text($text)
