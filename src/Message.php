@@ -29,7 +29,7 @@ class Message
 
     public function markdown(bool $need = true)
     {
-        $this->message['notification'] = $need;
+        $this->message['markdown'] = $need;
         return $this;
     }
 
